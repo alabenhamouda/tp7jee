@@ -15,6 +15,8 @@ public class User {
     private String country;
     private String state;
 
+    public User() {}
+
     public User(String login, String password, String email, String country,
                 String state) {
         this.login = login;
@@ -24,6 +26,7 @@ public class User {
         this.state = state;
     }
 
+    public Integer getId() { return id; }
     public String getLogin() { return login; }
     public void setLogin(String login) { this.login = login; }
     public String getPassword() { return password; }

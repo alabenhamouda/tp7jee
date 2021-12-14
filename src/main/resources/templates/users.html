@@ -32,18 +32,31 @@
                         <th>#</th>
                         <th>login</th>
                         <th>email</th>
-                        <th>ville</th>
+                        <th>country</th>
+                        <th>state</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="user : ${users}">
+                    <tr
+                        th:each="user : ${users}"
+                        class="clickable"
+                        th:data-id="${user.id}"
+                    >
                         <td th:text="${user.id}"></td>
                         <td th:text="${user.login}"></td>
                         <td th:text="${user.email}"></td>
-                        <td th:text="${user.ville}"></td>
+                        <td th:text="${user.country}"></td>
+                        <td th:text="${user.state}"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/users.js"></script>
     </body>
 </html>
